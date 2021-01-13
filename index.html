@@ -1,0 +1,37 @@
+<html>
+    <head></head>
+    <body>
+        <label>Enter Temperature</label><br><br>
+        <input type="text" name="text" id="temp"><br><br>
+        <select id="temp1">
+        <option value="C">Celsius</option>
+        <option value="F">Fahrenheit</option>
+        </select><br><br>
+        <button onclick="converttemp()" >Convert Temp</button>
+
+        <p id="a1"></p>
+
+       <script>
+           function converttemp(){
+            let temp1=document.getElementById('temp1');
+            console.log(temp1.value);
+            let x=document.getElementById('temp').value;
+            console.log(x);
+            if(temp1.value =='C')
+            {
+            let calculate=(x*(9/5)+32);
+            document.getElementById("a1").innerHTML = calculate;
+            }
+            else
+            {
+            let calculate=((x-32)*(5/9));
+            document.getElementById("a1").innerHTML = calculate;
+            }
+              
+    
+        }
+       
+       </script>
+    
+    </body>
+</html>
